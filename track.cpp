@@ -25,7 +25,7 @@
 #include <vector>
 #include <string.h>
 #include <assert.h>
-#include <endian.h>
+#include "endian.h"
 
 #define __STDC_LIMIT_MACROS 1
 #define __STDC_CONSTANT_MACROS 1
@@ -201,7 +201,7 @@ bool Codec::matchSample(unsigned char *start, int maxlength) {
 
 int Codec::getLength(unsigned char *start, int maxlength) {
 	if(name == "mp4a") {
-		AVFrame *frame = avcodec_alloc_frame();
+		AVFrame *frame = av_frame_alloc(); //avcodec_alloc_frame();
 		if(!frame)
 			throw string("Could not create AVFrame");
 		AVPacket avp;

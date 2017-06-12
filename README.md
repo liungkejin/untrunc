@@ -31,8 +31,7 @@ Go into the directory where it's been unzipped:
 
 Compile the source code using this command (all one line):
 
-    g++ -o untrunc file.cpp main.cpp track.cpp atom.cpp mp4.cpp -L/usr/local/lib -lavformat -lavcodec -lavutil
-
+    g++ -o untrunc file.cpp main.cpp track.cpp atom.cpp mp4.cpp -L/usr/local/lib -lavformat -lavcodec -lavutil -I/usr/local/include
 
 ## Installing on other operating system (Manual libav installation)
 
